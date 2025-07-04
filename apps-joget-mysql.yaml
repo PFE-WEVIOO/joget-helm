@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: joget-mysql-app
+  name: joget-app
   namespace: argocd
 spec:
   project: default
@@ -9,11 +9,15 @@ spec:
     repoURL: https://github.com/PFE-WEVIOO/joget-helm.git
     targetRevision: main
     path: deployment-configuration
+    helm:
+      skipCrds: true
   destination:
     server: https://kubernetes.default.svc
     namespace: joget
   syncPolicy:
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
 
