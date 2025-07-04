@@ -6,7 +6,7 @@ image:
   pullPolicy: Always
 
 mysql:
-  host: 10.111.91.60
+  host: 10.99.89.58
   database: jwdb
   username: tomcat
   password: tomcat
