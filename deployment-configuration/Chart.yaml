@@ -1,7 +1,8 @@
 apiVersion: v2
 name: deployment-configuration
-description: Helm Umbrella Chart for Joget + MySQL
+description: Umbrella chart for Joget + MySQL
 version: 0.1.0
+
 dependencies:
   - name: joget
     version: 0.1.0
@@ -9,3 +10,4 @@ dependencies:
   - name: mysql
     version: 0.1.0
     repository: file://../mysql
+

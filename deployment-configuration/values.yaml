@@ -1,2 +1,6 @@
-joget: {}
+joget:
+  ingress:
+    enabled: false
+
 mysql: {}
+
