@@ -19,20 +19,3 @@ service:
 
 nodeSelector:
   kubernetes.io/hostname: k8s-worker1
-
-ingress:
-  enabled: false
-  className: nginx
-  hosts:
-    - host: joget.local
-      paths:
-        - path: /
-          pathType: Prefix
-    - host: jogetapp.local
-      paths:
-        - path: /
-          pathType: Prefix
-    - host: d60d-165-51-8-92.ngrok-free.app
-      paths:
-        - path: /
-          pathType: Prefix
